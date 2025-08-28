@@ -1,0 +1,225 @@
+:root {
+    --marrom: #5a3e2b;
+    --marrom-escuro: #3f2b1e;
+    --laranja: #e86e17;
+    --laranja-claro: #ffb066;
+    --branco: #fffaf2;
+    --papel: #f2e8d9;
+    --preto: #1a120d;
+    --sombra: rgba(26,18,13,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background-color: var(--papel);
+    color: var(--marrom);
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+/* HEADER CENTRALIZADO NO TOPO */
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    text-align: center;
+    padding: 20px;
+    background: var(--branco);
+    border-bottom: 4px solid var(--laranja);
+    box-shadow: 0 6px 12px var(--sombra);
+    z-index: 999;
+}
+
+.brand .title {
+    font-size: 36px;
+    color: var(--marrom-escuro);
+    text-transform: uppercase;
+}
+
+.brand .subtitle {
+    font-size: 18px;
+    color: var(--laranja);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.main-nav ul li {
+    margin: 0 12px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--marrom);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+}
+
+/* CARDS */
+.card {
+    background: var(--branco);
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed var(--marrom);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--sombra);
+}
+
+/* Hero Section afastada do header fixo */
+.hero {
+    margin-top: 180px;
+}
+
+/* Títulos de seção */
+.section-title {
+    color: var(--laranja);
+    font-size: 24px;
+    margin-bottom: 12px;
+    border-left: 6px solid var(--laranja);
+    padding-left: 8px;
+}
+
+/* Artigos internos */
+.card article {
+    margin-top: 12px;
+}
+
+.card article h3 {
+    font-size: 20px;
+    color: var(--marrom-escuro);
+    margin-top: 8px;
+}
+
+.card article p {
+    margin-top: 6px;
+}
+
+/* Perfis dos líderes */
+.grid-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.profile {
+    background: var(--offwhite);
+    border: 1px solid var(--marrom);
+    border-radius: 12px;
+    padding: 12px;
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--sombra);
+}
+
+.profile img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.profile figcaption p {
+    font-size: 14px;
+}
+
+/* Listas */
+.checklist, .punishments, .refs, .timeline {
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+.checklist li::marker, .punishments li::marker, .timeline li::marker {
+    color: var(--laranja);
+}
+
+.aside, .sidebar {
+    background: var(--laranja-claro);
+    padding: 10px;
+    margin-top: 12px;
+    border-left: 4px solid var(--laranja);
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Blocos de citação */
+blockquote.quote {
+    font-style: italic;
+    color: var(--marrom-escuro);
+    border-left: 4px solid var(--laranja);
+    padding-left: 12px;
+    margin: 12px 0;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--branco);
+    border-top: 4px solid var(--laranja);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Links de navegação rápida */
+.small-nav p {
+    text-align: center;
+}
+
+.small-nav a {
+    color: var(--marrom-escuro);
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.small-nav a:hover {
+    color: var(--laranja);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-profiles {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul li {
+        margin: 6px 0;
+    }
+}
+
+
+p {
+  font-size: large
+}
+
